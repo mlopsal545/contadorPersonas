@@ -1,8 +1,10 @@
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    basic.showNumber(alu)
-})
 input.onButtonPressed(Button.A, function () {
-    alu += 1
+    if (alu < 12) {
+        alu += 1
+    }
+    if (alu == 12) {
+        music.playTone(262, music.beat(BeatFraction.Whole))
+    }
     basic.showNumber(alu)
 })
 input.onButtonPressed(Button.AB, function () {
@@ -14,6 +16,9 @@ input.onButtonPressed(Button.B, function () {
         alu += -1
         basic.showNumber(alu)
     }
+})
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showNumber(alu)
 })
 let alu = 0
 alu = 0

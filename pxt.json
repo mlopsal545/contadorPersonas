@@ -1,5 +1,5 @@
 {
-    "name": "contadorPersonas",
+    "name": "contadorPersonasMax",
     "description": "",
     "dependencies": {
         "core": "*",
